@@ -17,9 +17,11 @@ int main(void)
 	_putstring(PROMPT);
 	while (1)
 	{
-		if((read = getline(&line, &length, stdin)) == -1)
+		if((read = getline(&line, &length, stdin)) == EOF)
+		{
+			free(line);
 			return (-1);
-
+		}
 /*		if (!line)
 		{
 			_putstring("No line\n");
