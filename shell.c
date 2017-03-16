@@ -12,10 +12,14 @@ int main(void)
 	char *line = NULL;
 	size_t length = 0;
 	ssize_t read;
+//	unsigned int i = 0;
 
 	_putstring(PROMPT);
-	while ((read = getline(&line, &length, stdin) != EOF))
+	while (1)
 	{
+		if((read = getline(&line, &length, stdin)) == -1)
+			return (-1);
+
 		if (_strcmp(line, "\n") == 0)
 		{
 			_putstring(PROMPT);
@@ -38,9 +42,11 @@ int main(void)
 
 		execute_cmd(argv);
 
+		free(argv);
+
 		_putstring(PROMPT);
 
-		free(argv);
+
 	}
 	return (EXIT_SUCCESS);
 }

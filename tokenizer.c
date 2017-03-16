@@ -10,35 +10,40 @@
 char **tokenizer(char *line)
 {
 	char **argv;
-	char *token;
-	char *line_copy;
-	size_t i = 0;
-	size_t word_count = 0;
+	char *token;;
+	size_t tok_len;
+	unsigned int i;
 
 	if (!line)
 		return (NULL);
 
-	line_copy = _strdup(line);
-	token = strtok(line_copy, DELIMITER);
-
-	while (token)
+	tok_len = 0;
+	for (i = 0; line[i]; i++)
 	{
-		word_count++;
-		token = strtok(NULL, DELIMITER);
+		if(line[i] == '\n' || line[i] == ' ')
+			tok_len++;
+	}
+	tok_len++;
+
+	argv = malloc(sizeof(char *) * tok_len);
+
+	if(!argv)
+	{
+		perror("Error: Memory Allocation Failed");
+		return (NULL);
 	}
 
 	token = strtok(line, DELIMITER);
-	/*Need to malloc +1 ??*/
-	argv = malloc(sizeof(char *) * word_count);
 
-	while (token)
+	i = 0;
+	while (token != NULL)
 	{
 		argv[i] = token;
 		token = strtok(NULL, DELIMITER);
 		i++;
 	}
 
-	argv[i] = NULL; /* set last element to null */
+       	argv[i] = NULL; /* set last element to null */
 
 	return (argv);
 }
