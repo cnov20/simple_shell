@@ -19,7 +19,7 @@ int execute_cmd(char **argv)
 		if (pid == 0)
 		{
 			execve(argv[0], argv, environ);
-			/*	perror(); */
+				path_command(argv);
 		}
 		else if (pid < 0)
 		{

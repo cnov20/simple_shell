@@ -63,3 +63,50 @@ char *_strdup(char *src)
         return (_memcpy(dup, src, length));
 
 }
+
+/**
+ * _strcpy - copies a string
+ *@dest: points to buffer
+ *@src: points to string
+ *
+ * Return: the pointer to dest
+ *
+ */
+
+char *_strcpy(char *dest, char *src)
+{
+	int i = 0;
+
+	while (src[i] != '\0')
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = '\0';
+
+	return (dest);
+}
+
+/**
+ * *_strcat - concatenates two strings
+ * @dest: string to be added to
+ * @src: string to be appended
+ *
+ * Return: pointer to dest
+ */
+
+char *_strcat(char *dest, char *src)
+{
+	int i, j;
+
+	for (i = 0; dest[i] != '\0'; i++)
+	{
+
+	}
+	for (j = 0; src[j] != '\0'; j++, i++)
+	{
+		dest[i] = src[j];
+	}
+
+	return (dest);
+}

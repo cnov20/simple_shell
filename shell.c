@@ -20,18 +20,18 @@ int main(void)
 		if((read = getline(&line, &length, stdin)) == -1)
 			return (-1);
 
-		if (_strcmp(line, "\n") == 0)
-		{
-			_putstring(PROMPT);
-			continue;
-		}
-
 /*		if (!line)
 		{
 			_putstring("No line\n");
 			_putstring(PROMPT);
 		}
 */
+		if (_strcmp(line, "\n") == 0)
+		{
+			_putstring(PROMPT);
+			continue;
+		}
+
 		argv = tokenizer(line);
 
 		if (_strcmp(line, "exit") == 0)
@@ -45,7 +45,6 @@ int main(void)
 		free(argv);
 
 		_putstring(PROMPT);
-
 
 	}
 	return (EXIT_SUCCESS);
