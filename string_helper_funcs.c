@@ -23,6 +23,7 @@ char *_strncat(char *dest, char *src, int n)
 	}
 	return (dest);
 }
+
 /**
  * _putchar - writes the character c to stdout
  * @c: The character to print
@@ -30,16 +31,19 @@ char *_strncat(char *dest, char *src, int n)
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
  */
+
 int _putchar(char c)
 {
 	return (write(1, &c, 1));
 }
+
 /**
  * _putstring - prints a string to std out
- * @str - pointer to a string (array of characters)
+ * @str: pointer to a string (array of characters)
  *
  * Return: Nothing - void
  */
+
 void _putstring(char *str)
 {
 	unsigned int i;
@@ -58,6 +62,7 @@ void _putstring(char *str)
  *
  * Return: pointer to memory area (dest)
  */
+
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
 	unsigned int i;
@@ -96,45 +101,4 @@ int _strcmp(char *s1, char *s2)
 	}
 
 	return (0);
-}
-
-/**
- * _strdup - function that allocates space for and creates copy of given string
- * @src: source string to be duplicated and memory allocated for
- *
- * Return: pointer to duplicated string
- */
-
-char *_strdup(char *src)
-{
-	char *dup;
-	size_t length;
-
-	length = _strlen(src);
-	dup = malloc(length);
-
-	if (dup == NULL)
-		return (NULL);
-
-	return (_memcpy(dup, src, length));
-
-}
-
-/**
- * _strlen - finds the length of a string, excluding the null character
- * @str: pointer to string (arrary of characters)
- *
- * Return: length of string (unsigned int)
- */
-
-unsigned int _strlen(char *str)
-{
-	unsigned int i;
-
-	for (i = 0; i != '\0'; i++)
-	{
-		_putchar(str[i]);
-	}
-
-	return (i);
 }

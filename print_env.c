@@ -1,6 +1,6 @@
 #include "shell.h"
 
-void _print_env(void)
+int _print_env(void)
 {
 	int i;
 

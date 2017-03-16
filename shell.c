@@ -26,12 +26,12 @@ int main(void)
 			continue;
 		}
 
-		if (!line)
+/*		if (!line)
 		{
 			_putstring("No line\n");
 			_putstring(PROMPT);
 		}
-
+*/
 		argv = tokenizer(line);
 
 		if (_strcmp(line, "exit") == 0)
