@@ -30,13 +30,16 @@ int main(void)
 
 		argv = tokenizer(line);
 
+		if (_strcmp(line, "exit") == 0)
+			return (0);
+
 		if (_strcmp(line, "env") == 0)
 		     	_print_env();
 
 		execute_cmd(argv);
 
 		_putstring(PROMPT);
-		free(line);
+
 		free(argv);
 	}
 	return (EXIT_SUCCESS);

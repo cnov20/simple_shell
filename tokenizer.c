@@ -40,7 +40,5 @@ char **tokenizer(char *line)
 
 	argv[i] = NULL; /* set last element to null */
 
-	free(line_copy);
-
 	return (argv);
 }

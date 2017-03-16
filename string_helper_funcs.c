@@ -117,7 +117,7 @@ char *_strdup(char *src)
 		return (NULL);
 
 	return (_memcpy(dup, src, length));
-	free(dup);
+//	free(dup);
 }
 
 /**
