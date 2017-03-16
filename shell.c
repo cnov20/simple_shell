@@ -49,10 +49,7 @@ int main(void)
 		}
 
 		free (argv);
-<<<<<<< HEAD
-=======
 
->>>>>>> 2b53134a551c9c60e75c1f8b24f8acd23a773ecb
 		_putstring(PROMPT);
 	}
 
