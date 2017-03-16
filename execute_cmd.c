@@ -31,6 +31,5 @@ int execute_cmd(char **argv)
 			wait(&status);
 		}
 	}
-
 	return (pid);
 }
