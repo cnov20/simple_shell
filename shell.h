@@ -44,6 +44,6 @@ void shell_exit(int status);
 char **tokenizer(char *line);
 int execute_cmd(char **argv);
 char *_strncat(char *dest, char *src, int n);
-void _print_env(void);
+int _print_env(void);
 
 #endif /*SHELL_H*/
