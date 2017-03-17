@@ -1,5 +1,11 @@
 #include "shell.h"
 
+/**
+ * read_line - function that uses getline() to accept user input
+ *
+ * Return: line from user passed from stdin
+ */
+
 char *read_line(void)
 {
 	char *line;
@@ -12,10 +18,6 @@ char *read_line(void)
 		_putstring("\n[Exiting]\n");
 		free(line);
 		exit(EXIT_SUCCESS);
-<<<<<<< HEAD
-=======
-
->>>>>>> c87408e057bed45b3c1e666ad1764f9851b400cc
 	}
 
 	return (line);

@@ -1,5 +1,13 @@
 #include "shell.h"
 
+/**
+ * build_path - function appends token to end of appropriate path
+ * @token: tokenized command entered from stdin by user
+ * @value: value of PATH variable needed for token
+ *
+ * Return: Full command_path to find executable program
+ */
+
 char *build_path(char *token, char *value)
 {
 	char *command_path;

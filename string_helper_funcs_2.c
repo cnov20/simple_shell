@@ -9,14 +9,14 @@
 
 unsigned int _strlen(char *str)
 {
-        unsigned int i;
+	unsigned int i;
 
-        for (i = 0; str[i] != '\0'; i++)
-        {
+	for (i = 0; str[i] != '\0'; i++)
+	{
 		;
-        }
+	}
 
-        return (i);
+	return (i);
 }
 
 /**
@@ -40,28 +40,6 @@ char *_memset(char *s, char b, unsigned int n)
 	}
 
 	return (s);
-}
-
-/**
- * _strdup - function that allocates space for and creates copy of given string
- * @src: source string to be duplicated and memory allocated for
- *
- * Return: pointer to duplicated string
- */
-
-char *_strdup(char *src)
-{
-        char *dup;
-        size_t length;
-
-        length = _strlen(src);
-        dup = malloc(length);
-
-        if (dup == NULL)
-                return (NULL);
-
-        return (_memcpy(dup, src, length));
-
 }
 
 /**

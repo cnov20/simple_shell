@@ -17,12 +17,12 @@ int main(void)
 	{
 		line = read_line();
 
-/*		if (strcmp(line, "\n") == 0)
+		if (strcmp(line, "\n") == 0)
 		{
 			_putstring(PROMPT);
 			continue;
 		}
-*/
+
 		argv = tokenizer(line);
 
 		execute_cmd(argv, line);
@@ -30,11 +30,7 @@ int main(void)
 		_putstring(PROMPT);
 
 		free(line);
-		free (argv);
-<<<<<<< HEAD
-		free(line);
-=======
->>>>>>> c87408e057bed45b3c1e666ad1764f9851b400cc
+		free(argv);
 	}
 
 	return (0);
