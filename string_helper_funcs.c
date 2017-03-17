@@ -84,8 +84,7 @@ char *_memcpy(char *dest, char *src, unsigned int n)
  *
  * Return: int equal to difference between characters
  */
-
-int _strcmp(char *s1, char *s2)
+int _strcmp(const char *s1, const char *s2)
 {
 	int i;
 

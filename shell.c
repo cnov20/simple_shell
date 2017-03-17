@@ -12,6 +12,7 @@ int main(void)
 	char *line = NULL;
 
 	_putstring(PROMPT);
+
 	while (1)
 	{
 		line = read_line();
@@ -28,8 +29,12 @@ int main(void)
 
 		_putstring(PROMPT);
 
-		free (argv);
 		free(line);
+		free (argv);
+<<<<<<< HEAD
+		free(line);
+=======
+>>>>>>> c87408e057bed45b3c1e666ad1764f9851b400cc
 	}
 
 	return (0);

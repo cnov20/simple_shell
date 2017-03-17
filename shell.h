@@ -9,7 +9,6 @@
 #include <sys/stat.h>
 #include <sys/wait.h>
 #define PROMPT "$ "
-#define BUFF_SIZE 1024
 #define pid_max 32768
 #define DELIMITER "\n\t\r\a "
 #define EXIT_FAILURE    1       /* Failing exit status.  */
@@ -17,39 +16,24 @@
 
 extern char **environ;
 
-typedef struct path_link
-{
-	char *token;
-	struct path_link *next;
-
-} link_t;
-
-typedef struct shell_node
-{
-        char *token;
-        struct shell_node *next;
-
-} shell_node_t;
-
-shell_node_t *createlist_PATH(shell_node_t **head, char *token);
 int execve(const char *filename, char *const argv[], char *const envp[]);
 void _putstring(char *str);
 unsigned int _strlen(char *str);
 int _putchar(char c);
-int _strcmp(char *s1, char *s2);
 char *_memcpy(char *dest, char *src, unsigned int n);
 char *_strdup(char *src);
 void shell_exit(int status);
 char **tokenizer(char *line);
-int execute_cmd(char **argv);
+int execute_cmd(char **argv, char *line);
 char *_strcat(char *dest, char *src);
 char *_strncat(char *dest, char *src, int n);
 char *_strcpy(char *dest, char *src);
 char *_memset(char *s, char b, unsigned int n);
 int _print_env(void);
 char *_getenv(char *name);
-char *path_builder(char *command, char *directory);
-int path_command(char **argv);
+int _strcmp(const char *s1, const char *s2);
 int _strncmp(const char *s1, const char *s2, size_t n);
-
+int get_path(char **tokens);
+char *build_path(char *token, char *value);
+char *read_line(void);
 #endif /*SHELL_H*/

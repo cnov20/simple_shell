@@ -11,15 +11,12 @@ char **tokenizer(char *line)
 {
 	char **argv;
 	char *token;
-	size_t tok_len = 0;
-	unsigned int i;
-
-	if (!line)
-		return (NULL);
+	int  tok_len = 0;
+	int i;
 
 	for (i = 0; line[i]; i++)
 	{
-		if(line[i] == '\n' || line[i] == ' ')
+		if(line[i] == ' ' || line[i] == '\n')
 			tok_len++;
 	}
 	tok_len++;
@@ -32,15 +29,17 @@ char **tokenizer(char *line)
 		return (NULL);
 	}
 
-	token = strtok(line, "\n");
+	token = strtok(line, " \n");
 
 	i = 0;
-	while (token != NULL)
+	while (token)
 	{
 		argv[i] = token;
-		token = strtok(NULL, "\n");
+		token = strtok(NULL, " \n");
 		i++;
 	}
+
        	argv[i] = NULL; /* set last element to null */
+
 	return (argv);
 }
