@@ -6,7 +6,6 @@
  * Return: EXIT_SUCCESS macro (value of 0) - ON SUCCESS
  */
 
-
 int _print_env(void)
 {
 	int i;

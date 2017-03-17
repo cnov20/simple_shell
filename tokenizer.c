@@ -29,13 +29,13 @@ char **tokenizer(char *line)
 		return (NULL);
 	}
 
-	token = strtok(line, "\n ");
+	token = strtok(line, DELIMITER);
 
 	i = 0;
 	while (token)
 	{
 		argv[i] = token;
-		token = strtok(NULL, "\n ");
+		token = strtok(NULL, DELIMITER);
 		i++;
 	}
 
