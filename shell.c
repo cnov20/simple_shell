@@ -10,48 +10,28 @@ int main(void)
 {
 	char **argv;
 	char *line = NULL;
-	size_t length = 0;
-	ssize_t read;
 
 	_putstring(PROMPT);
+
 	while (1)
 	{
+		line = read_line();
 
-		if ((read = getline(&line, &length, stdin)) == EOF)
-		{
-			free(line);
-			return (-1);
-		}
-
-/*		if (!line)
-		{
-			_putstring("No line\n");
-			_putstring(PROMPT);
-		}
-*/
-		if (_strcmp(line, "\n") == 0)
+/*		if (strcmp(line, "\n") == 0)
 		{
 			_putstring(PROMPT);
 			continue;
 		}
-
+*/
 		argv = tokenizer(line);
 
-		execute_cmd(argv);
-
-		if (_strcmp(line, "exit") == 0)
-		{
-			return (0);
-		}
-		if (_strcmp(line, "env") == 0)
-		{
-			_print_env();
-		}
-
-		free (argv);
+		execute_cmd(argv, line);
 
 		_putstring(PROMPT);
+
+		free(line);
+		free (argv);
 	}
 
-	return (EXIT_SUCCESS);
+	return (0);
 }

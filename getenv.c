@@ -1,15 +1,11 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include "shell.h"
 
-extern char **environ;
-
-char *_getenv(const char *name)
+char *_getenv(char *name)
 {
 	char *token;
 	char *match;
 
-	match = malloc(sizeof(*name));
+	match = malloc(sizeof(char *));
 
 	while (*environ)
 	{
