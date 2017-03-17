@@ -30,9 +30,8 @@ int get_path(char **tokens)
 			free(path);
 			return (0);
 		}
-
-		value = strtok(NULL, ":");
 		free(full_path);
+		value = strtok(NULL, ":");
 	}
 
 	free(path);

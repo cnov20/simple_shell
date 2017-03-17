@@ -5,11 +5,12 @@
  *
  * Return: int - indicating success or failure
  */
-
-int main(void)
+int main (void)
 {
 	char **argv;
-	char *line = NULL;
+	char *line;
+
+//	int status = 1;
 
 	_putstring(PROMPT);
 
@@ -17,13 +18,12 @@ int main(void)
 	{
 		line = read_line();
 
-		if (strcmp(line, "\n") == 0)
-		{
-			_putstring(PROMPT);
-			continue;
-		}
-
 		argv = tokenizer(line);
+
+		if (_strcmp(line, "exit") == 0)
+		{
+			return (0);
+		}
 
 		execute_cmd(argv, line);
 

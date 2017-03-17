@@ -22,7 +22,7 @@ unsigned int _strlen(char *str);
 int _putchar(char c);
 char *_memcpy(char *dest, char *src, unsigned int n);
 char *_strdup(char *src);
-void shell_exit(int status);
+void shell_exit(char **argv, char *line);
 char **tokenizer(char *line);
 int execute_cmd(char **argv, char *line);
 char *_strcat(char *dest, char *src);
@@ -36,4 +36,5 @@ int _strncmp(const char *s1, const char *s2, size_t n);
 int get_path(char **tokens);
 char *build_path(char *token, char *value);
 char *read_line(void);
+int _atoi(char *s);
 #endif /*SHELL_H*/
