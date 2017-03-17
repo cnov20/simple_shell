@@ -12,6 +12,8 @@ This program must have the exact same output as sh as long as  the exact same er
 ### __Clone repository:__ https://github.com/cnov20/simple_shell.git
 ### __Run the shell__: ./hsh
 ### __Exit the shell__: `exit`or ctrl + D
+### Exit status
+Exits with code 0 on "end of file" condition. `CTRL + D`. Otherwise the shell will return the exit status of the last command executed, or if the exit builtin is used with  a numeric argument, it will return the argument.
 ## List of functions and system calls used
 
 |Custom functions  | Functionality                    |
@@ -53,7 +55,13 @@ __Contains all function prototypes and function structures used for the program:
 *concatenates two strings*
   * `void _print_env(void);`
 *prints the environment*
-
+### Examples
+   * /bin/ls: prints the content of the current directory and prints new prompt right after the command was executed and the result was printed to standard output.
+![alt text](https://cdn-images-1.medium.com/max/2000/1*wE81xGPFm7-wYUNAWs87yA.png)
+   * /bin/pwd: prints the path of the current working directory to stdandard output and prints the prompt right after - ready for a new command to be entered.
+![alt text](https://cdn-images-1.medium.com/max/2000/1*odK9R3oSGx9BRG8_9FMmNw.png)
+   * exit: builtin that terminate the shell
+![alt text](https://cdn-images-1.medium.com/max/2000/1*D91ITaERgRK5JreB5aGPJA.png)
 ## Authors
 
 Christopher Novelli: [github account](https://github.com/cnov20), [twitter](https://twitter.com/c_nov20)

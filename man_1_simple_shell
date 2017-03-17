@@ -1,0 +1,30 @@
+.TH man 1 "19 April 2017" "0.0" "HSH"
+.SH NAME
+.B hsh
+- super simple command interpreter
+At this stage does not use the PATH and all commands can be excuted starting
+with /bin/command
+.SH SYNOPSIS
+.B hsh
+Displays a prompt and wait for the user to type a command. A command line always ends with a new line. The prompt is displayed again each time a command has been executed.If an executable cannot be found,  an error message
+will be printed and the prompt will be displayed  again.
+.SH DESCRIPTION
+The shell project is part of Holberton school curriculu\
+m and this custom shell suppose to replicate some of the functionalities of sh.
+Display a prompt and wait for the user to type a command. A command line always ends with a new line. The prompt is displayed again each time a command has been executed.If an executable cannot be found,  an error message will be printed and the prompt will be displayed  again.
+.SH OPTIONS
+.B ./hsh
+Supports some standard aliases
+.I ls -l,
+.I ls -la
+.SH BUGS
+No known bugs.
+Report any found bugs to 128@holbertonschool.com or katya@holbertonschool.com
+.SH EXIT STATUS
+exits with code 0 on "end of file" condition. `CTRL + D`. Otherwise the shell will return the exit status of the last command executed, or if the exit builtin is used with a numeric argument, it will return the argument.
+.SH EXAMPLES
+.I /bin/ls - prints content of the current directory
+.I /bin/pwd - prints the path of the current working directory
+.SH AUTHORS
+Written by
+Christopher Novelli (@c_nov20), Ekaterina Kalache(@KatyaKalache)
