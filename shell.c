@@ -5,12 +5,11 @@
  *
  * Return: int - indicating success or failure
  */
+
 int main (void)
 {
 	char **argv;
 	char *line;
-
-//	int status = 1;
 
 	_putstring(PROMPT);
 
@@ -22,7 +21,14 @@ int main (void)
 
 		if (_strcmp(line, "exit") == 0)
 		{
-			return (0);
+			free(line);
+			free(argv);
+		        exit(EXIT_SUCCESS);
+		}
+
+		if (_strcmp(line, "env") == 0)
+		{
+			_print_env();
 		}
 
 		execute_cmd(argv, line);
@@ -31,6 +37,7 @@ int main (void)
 
 		free(line);
 		free(argv);
+
 	}
 
 	return (0);

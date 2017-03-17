@@ -27,14 +27,12 @@ int get_path(char **tokens)
 		if (stat(full_path, &buffer) == 0)
 		{
 			*tokens = full_path;
-			free(path);
 			return (0);
 		}
+
 		free(full_path);
 		value = strtok(NULL, ":");
 	}
-
-	free(path);
 
 	return (1);
 }

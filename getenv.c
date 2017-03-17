@@ -23,7 +23,7 @@ char *_getenv(char *name)
 			if (_strcmp(name, token) == 0)
 			{
 				token = strtok(NULL, "\0");
-				match = _strdup(token);
+				match = token;
 				return (match);
 			}
 		}
