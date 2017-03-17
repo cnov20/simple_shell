@@ -8,7 +8,7 @@ char *build_path(char *token, char *value)
 	command_len = _strlen(value) + _strlen(token) + 2;
 	command_path = malloc(sizeof(command_len));
 
-	if (command_path != NULL)
+	if (command_path == NULL)
 	{
 		return (NULL);
 	}
