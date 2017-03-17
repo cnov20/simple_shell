@@ -11,9 +11,9 @@ unsigned int _strlen(char *str)
 {
         unsigned int i;
 
-        for (i = 0; i != '\0'; i++)
+        for (i = 0; str[i] != '\0'; i++)
         {
-                _putchar(str[i]);
+		;
         }
 
         return (i);
@@ -30,7 +30,7 @@ unsigned int _strlen(char *str)
 
 char *_memset(char *s, char b, unsigned int n)
 {
-	unsigned int i;
+	size_t i;
 
 	i = 0;
 	while (i < n)

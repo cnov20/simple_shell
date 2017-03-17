@@ -1,38 +1,34 @@
 #include "shell.h"
 
-char *get_path(char *token)
+int get_path(char **tokens)
 {
-//	char *token;
 	char *value;
 	char *path;
 	char *full_path;
+	struct stat buffer;
 
 	/* get value of PATH variable */
-	value = _getenv("PATH");
+	path = _getenv("PATH");
 
 	/* parse value of PATH variable */
-	path = strtok(value, ":");
+	value = strtok(path, ":");
 
-	printf("%s\n", path);
-	getchar();
-
-	full_path = build_path(value, token);
-
-	printf("%s\n", full_path);
-	getchar();
-
-	while (path)
+	while (value)
 	{
-		if (access(full_path, X_OK) == 0)		{
-			return (full_path);
-		}
-		else
+		full_path = build_path(*tokens, value);
+
+		if (stat(full_path, &buffer) == 0)
 		{
-			perror("Error: Path Not Found");
+			*tokens = full_path;
+			free(path);
+			return (0);
 		}
 
-		path = strtok(NULL, ":");
+		value = strtok(NULL, ":");
+		free(full_path);
 	}
 
-	return (token);
+		free(path);
+
+	return (1);
 }

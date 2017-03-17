@@ -1,31 +1,28 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include "shell.h"
 
-extern char **environ;
-
-char *_getenv(const char *name)
+char *_getenv(char *name)
 {
 	char *token;
 	char *match;
-
-	match = malloc(sizeof(*name));
+	char *env_copy;
 
 	while (*environ)
 	{
-		token = strtok(*environ, "=");
-		while (token)
+		env_copy = *environ;
+		token = strtok(env_copy, "=");
+
+		if (token)
 		{
-			if (strcmp(name, token) == 0)
+			if (_strcmp(name, token) == 0)
 			{
 				token = strtok(NULL, "\0");
-				match = strcpy(match, token);
+				match = _strdup(token);
+				return (match);
 		       	}
-
-			token = strtok(NULL, "\0");
 		}
+
 		environ++;
 	}
 
-	return (match);
+	return (NULL);
 }
