@@ -63,4 +63,4 @@ Christopher Novelli: [github account](https://github.com/cnov20), [twitter](http
 Ekaterina Kalache: [github account](https://github.com/KatyaKalache), [twitter](https://twitter.com/KatyaKalache)
 
 ## License
-Public, no copyright protection
+Public, no copyright protectiones
