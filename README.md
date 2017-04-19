@@ -57,7 +57,7 @@ __Contains all function prototypes and function structures used for the program:
 *prints the environment*
 ### Examples
    * print the content of the current directory
-(https://cdn-images-1.medium.com/max/2000/1*HMhr8aYRll4ahPWO18k6Cg.png)
+![alt text](https://cdn-images-1.medium.com/max/2000/1*HMhr8aYRll4ahPWO18k6Cg.png)
 ## Authors
 
 Christopher Novelli: [github account](https://github.com/cnov20), [twitter](https://twitter.com/c_nov20)
