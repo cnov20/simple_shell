@@ -6,9 +6,10 @@ At this stage does not use the PATH and all commands can be excuted starting
 with /bin/command
 .SH SYNOPSIS
 .B hsh
-\fBFORMAT
-\fB[ARGUMENT(S)]...
-
+Display a prompt and wait for the user to type a command. A command line a
+lways ends with a new line. The prompt is displayed again each time a comm
+and has been executed.If an executable cannot be found,  an error message
+will be printed and the prompt will be displayed  again.
 .SH DESCRIPTION
 The shell project is part of Holberton school curriculu\
 m and this custom shell suppose to replicate some of the functionalities of sh.
@@ -16,7 +17,7 @@ Display a prompt and wait for the user to type a command. A command line always 
 .SH OPTIONS
 .B ./hsh
 Supports some standard aliases
-.I ls -l
+.I ls -l,
 .I ls -la
 .SH BUGS
 No known bugs.
