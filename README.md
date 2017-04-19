@@ -12,6 +12,8 @@ This program must have the exact same output as sh as long as  the exact same er
 ### __Clone repository:__ https://github.com/cnov20/simple_shell.git
 ### __Run the shell__: ./hsh
 ### __Exit the shell__: `exit`or ctrl + D
+### Exit status
+Exits with code 0 on "end of file" condition. `CTRL + D`. Otherwise the shell will return the exit status of the last command executed, or if the exit builtin is used with  a numeric argument, it will return the argument.
 ## List of functions and system calls used
 
 |Custom functions  | Functionality                    |
