@@ -11,6 +11,7 @@ This program must have the exact same output as sh as long as  the exact same er
 
 ### __Clone repository:__ https://github.com/cnov20/simple_shell.git
 ### __Run the shell__: ./hsh
+### __Exit the shell__: `exit`or ctrl + D
 ## List of functions and system calls used
 
 |Custom functions  | Functionality                    |

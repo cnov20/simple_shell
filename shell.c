@@ -45,10 +45,6 @@ int main(void)
 		execute_cmd(argv);
 		free (argv);
 		_putstring(PROMPT);
-<<<<<<< HEAD
-=======
-
->>>>>>> cd88cde139d1386e926362dab77158897c896bab
 	}
 	return (EXIT_SUCCESS);
 }
