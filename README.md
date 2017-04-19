@@ -55,7 +55,9 @@ __Contains all function prototypes and function structures used for the program:
 *concatenates two strings*
   * `void _print_env(void);`
 *prints the environment*
-
+### Examples
+   * print the content of the current directory
+(https://cdn-images-1.medium.com/max/2000/1*HMhr8aYRll4ahPWO18k6Cg.png)
 ## Authors
 
 Christopher Novelli: [github account](https://github.com/cnov20), [twitter](https://twitter.com/c_nov20)
