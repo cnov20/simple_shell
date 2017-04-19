@@ -12,13 +12,12 @@ int main(void)
 	char *line = NULL;
 	size_t length = 0;
 	ssize_t read;
-//	unsigned int i = 0;
 
 	_putstring(PROMPT);
 	while (1)
 	{
 		if((read = getline(&line, &length, stdin)) == -1)
-			return (-1);
+		return (-1);
 
 		if (_strcmp(line, "\n") == 0)
 		{
@@ -33,20 +32,19 @@ int main(void)
 		}
 
 		argv = tokenizer(line);
-
 		if (_strcmp(line, "exit") == 0)
+		{
+			free (line);
 			return (0);
-
+		}
 		if (_strcmp(line, "env") == 0)
-		     	_print_env();
-
+		{
+			free(line);
+			_print_env();
+		}
 		execute_cmd(argv);
-
-		free(argv);
-
+		free (argv);
 		_putstring(PROMPT);
-
-
 	}
 	return (EXIT_SUCCESS);
 }
