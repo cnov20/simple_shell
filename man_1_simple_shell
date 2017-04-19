@@ -6,9 +6,7 @@ At this stage does not use the PATH and all commands can be excuted starting
 with /bin/command
 .SH SYNOPSIS
 .B hsh
-Display a prompt and wait for the user to type a command. A command line a
-lways ends with a new line. The prompt is displayed again each time a comm
-and has been executed.If an executable cannot be found,  an error message
+Displays a prompt and wait for the user to type a command. A command line always ends with a new line. The prompt is displayed again each time a command has been executed.If an executable cannot be found,  an error message
 will be printed and the prompt will be displayed  again.
 .SH DESCRIPTION
 The shell project is part of Holberton school curriculu\
