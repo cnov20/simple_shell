@@ -16,8 +16,12 @@ int main(void)
 	_putstring(PROMPT);
 	while (1)
 	{
-		if((read = getline(&line, &length, stdin)) == -1)
-		return (-1);
+
+		if ((read = getline(&line, &length, stdin)) == EOF)
+		{
+			free(line);
+			return (-1);
+		}
 
 /*		if (!line)
 		{
@@ -32,19 +36,25 @@ int main(void)
 		}
 
 		argv = tokenizer(line);
+
+		execute_cmd(argv);
+
 		if (_strcmp(line, "exit") == 0)
 		{
-			free (line);
 			return (0);
 		}
 		if (_strcmp(line, "env") == 0)
 		{
-			free(line);
 			_print_env();
 		}
-		execute_cmd(argv);
+
 		free (argv);
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2b53134a551c9c60e75c1f8b24f8acd23a773ecb
 		_putstring(PROMPT);
 	}
+
 	return (EXIT_SUCCESS);
 }

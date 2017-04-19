@@ -7,7 +7,7 @@ char *path_builder(char *command, char *directory)
 	size_t cmd_size;
 
 	cmd_size = _strlen(command) + _strlen(directory) + 2;
-	full_path = malloc(sizeof(cmd_size));
+	full_path = malloc(sizeof(char) * cmd_size);
 
 	if (!full_path)
 	{

@@ -50,5 +50,6 @@ int _print_env(void);
 char *_getenv(char *name);
 char *path_builder(char *command, char *directory);
 int path_command(char **argv);
+int _strncmp(const char *s1, const char *s2, size_t n);
 
 #endif /*SHELL_H*/
