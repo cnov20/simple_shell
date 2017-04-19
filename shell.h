@@ -31,7 +31,6 @@ typedef struct shell_node
 
 } shell_node_t;
 
-char *_getenv_PATH(const char *name);
 shell_node_t *createlist_PATH(shell_node_t **head, char *token);
 int execve(const char *filename, char *const argv[], char *const envp[]);
 void _putstring(char *str);
@@ -43,7 +42,13 @@ char *_strdup(char *src);
 void shell_exit(int status);
 char **tokenizer(char *line);
 int execute_cmd(char **argv);
+char *_strcat(char *dest, char *src);
 char *_strncat(char *dest, char *src, int n);
-void _print_env(void);
+char *_strcpy(char *dest, char *src);
+char *_memset(char *s, char b, unsigned int n);
+int _print_env(void);
+char *_getenv(char *name);
+char *path_builder(char *command, char *directory);
+int path_command(char **argv);
 
 #endif /*SHELL_H*/

@@ -19,16 +19,16 @@ int main(void)
 		if((read = getline(&line, &length, stdin)) == -1)
 		return (-1);
 
+/*		if (!line)
+		{
+			_putstring("No line\n");
+			_putstring(PROMPT);
+		}
+*/
 		if (_strcmp(line, "\n") == 0)
 		{
 			_putstring(PROMPT);
 			continue;
-		}
-
-		if (!line)
-		{
-			_putstring("No line\n");
-			_putstring(PROMPT);
 		}
 
 		argv = tokenizer(line);
@@ -45,6 +45,10 @@ int main(void)
 		execute_cmd(argv);
 		free (argv);
 		_putstring(PROMPT);
+<<<<<<< HEAD
+=======
+
+>>>>>>> cd88cde139d1386e926362dab77158897c896bab
 	}
 	return (EXIT_SUCCESS);
 }

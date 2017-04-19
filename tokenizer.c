@@ -32,13 +32,13 @@ char **tokenizer(char *line)
 		return (NULL);
 	}
 
-	token = strtok(line, DELIMITER);
+	token = strtok(line, "\n");
 
 	i = 0;
 	while (token != NULL)
 	{
 		argv[i] = token;
-		token = strtok(NULL, DELIMITER);
+		token = strtok(NULL, "\n");
 		i++;
 	}
        	argv[i] = NULL; /* set last element to null */

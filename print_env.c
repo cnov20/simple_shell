@@ -1,8 +1,11 @@
 #include "shell.h"
 
-void _print_env(void)
+int _print_env(void)
 {
 	int i;
+
+	if (environ == NULL)
+		return (EXIT_FAILURE);
 
 	for (i = 0; environ[i] != NULL; i++)
 	{
@@ -10,4 +13,5 @@ void _print_env(void)
 		_putchar('\n');
 	}
 
+	return (EXIT_SUCCESS);
 }
