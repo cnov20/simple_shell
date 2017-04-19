@@ -56,8 +56,12 @@ __Contains all function prototypes and function structures used for the program:
   * `void _print_env(void);`
 *prints the environment*
 ### Examples
-   * print the content of the current directory
-![alt text](https://cdn-images-1.medium.com/max/2000/1*HMhr8aYRll4ahPWO18k6Cg.png)
+   * /bin/ls: prints the content of the current directory and prints new prompt right after the command was executed and the result was printed to standard output.
+![alt text](https://cdn-images-1.medium.com/max/2000/1*wE81xGPFm7-wYUNAWs87yA.png)
+   * /bin/pwd: prints the path of the current working directory to stdandard output and prints the prompt right after - ready for a new command to be entered.
+![alt text](https://cdn-images-1.medium.com/max/2000/1*odK9R3oSGx9BRG8_9FMmNw.png)
+   * exit: builtin that terminate the shell
+![alt text](https://cdn-images-1.medium.com/max/2000/1*D91ITaERgRK5JreB5aGPJA.png)
 ## Authors
 
 Christopher Novelli: [github account](https://github.com/cnov20), [twitter](https://twitter.com/c_nov20)
@@ -65,4 +69,4 @@ Christopher Novelli: [github account](https://github.com/cnov20), [twitter](http
 Ekaterina Kalache: [github account](https://github.com/KatyaKalache), [twitter](https://twitter.com/KatyaKalache)
 
 ## License
-Public, no copyright protectiones
+Public, no copyright protection
